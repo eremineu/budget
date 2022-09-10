@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
+import { CssBaseline } from '@mui/material';
 import Head from 'next/head';
-import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -9,6 +9,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to frontend!</title>
       </Head>
       <main className="app">
+        <CssBaseline />
         <Component {...pageProps} />
       </main>
     </>

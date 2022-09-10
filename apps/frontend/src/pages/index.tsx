@@ -1,7 +1,9 @@
+import { Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 const Index = () => {
   const [data, setData] = useState('');
+
   useEffect(() => {
     fetch('http://localhost:3333/api')
       .then((res) => {
@@ -10,7 +12,7 @@ const Index = () => {
       .then((d) => setData(d.message));
   }, []);
 
-  return <p>{data}</p>;
+  return <Typography variant="h6">{data}</Typography>;
 };
 
 export default Index;

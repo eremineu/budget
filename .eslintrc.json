@@ -6,6 +6,16 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "sort-imports": ["error", {
+          "ignoreCase": false,
+          "ignoreDeclarationSort": false,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
+          "allowSeparatedGroups": false
+      }],
+        "sort-keys": 2,
+        "sort-vars": 2,
+        "require-await": 2,
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {
